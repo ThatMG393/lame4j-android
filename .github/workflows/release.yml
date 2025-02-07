@@ -46,7 +46,7 @@ jobs:
       - name: Build project
         run: |
           cd rust
-          cargo build --target=${{ matrix.target-triple }} --release --lib
+          cargo build --features target_host --target=${{ matrix.target-triple }} --release --lib
 
       - name: Upload built library
         uses: actions/upload-artifact@v4
